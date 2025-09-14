@@ -97,25 +97,4 @@ Data sourced from military textile suppliers, sustainability reports, and indepe
 - Web & UX: Frontend Developers  
 - Domain Experts: Military Textile Consultants
 
-***
 
-**Download/copy instructions:**  
-- Click the triple-dot menu next to this answer and select "Copy."  
-- Paste directly into a file named `README.md` in your project folder.
-
-This file is ready-to-use for your documentation needs.[10][14][11][12][13]
-
-[1](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
-[2](https://github.com/othneildrew/Best-README-Template)
-[3](https://readme.so)
-[4](https://www.makeareadme.com)
-[5](https://www.drupal.org/docs/develop/managing-a-drupalorg-theme-module-or-distribution-project/documenting-your-project/readmemd-template)
-[6](https://www.thegooddocsproject.dev/template/readme)
-[7](https://www.readme-templates.com)
-[8](https://social-science-data-editors.github.io/template_README/)
-[9](https://gitlab.com/kopino4-templates/readme-template)
-[10](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/82171718/63bf7200-1cf5-4ce3-ba93-f5db8b72b37b/index.html)
-[11](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/82171718/a7bd66ef-97c0-45d3-bfe2-ad1ac5c68c52/material_sustainability_environmental_impact.pdf)
-[12](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/82171718/15be8af8-bd2a-45c8-a3d3-7fef68ab8604/supplier_data_filtered.pdf)
-[13](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/82171718/25dc8d7f-454b-4828-a8f8-88557f7c2534/supplier_data_ratings.pdf)
-[14](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/82171718/f076bc5e-517c-45e0-991f-2d18e67da098/updated.html)
