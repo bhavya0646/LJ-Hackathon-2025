@@ -1,7 +1,3 @@
-Below is the complete README.md file as plain Markdown text based on your supplied project data. You can copy and save this as `README.md` in your project directory for immediate use.[10][11][12][13][14]
-
-***
-
 # AI-Powered Military Fabric Selection Platform
 
 Empowering military uniform procurement with **AI/ML-driven tools** for intelligent fabric recommendations, sustainability scoring, and supplier analytics.
