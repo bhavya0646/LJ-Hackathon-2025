@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fabric Blends and Properties</title>
+    <style>
+        /* Background inspired by fabric texture and color palette */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px 40px;
+            background: linear-gradient(135deg, #ece7e1 25%, #d9cec4 25%, #d9cec4 50%, #ece7e1 50%, #ece7e1 75%, #d9cec4 75%, #d9cec4 100%);
+            background-size: 40px 40px;
+            color: #433d3c;
+            line-height: 1.6;
+            user-select: none;
+        }
+
+        h1,
+        h2 {
+            color: #7d4a3e;
+            text-shadow: 1px 1px 2px #d2bba0;
+            user-select: text;
+            margin-bottom: 15px;
+        }
+
+        section {
+            background: #f8f4f0dd;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(125, 74, 62, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 6px 25px rgba(125, 74, 62, 0.3);
+            cursor: default;
+        }
+
+        ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            cursor: default;
+            padding-left: 12px;
+            border-left: 4px solid #d4b083;
+            background: #fff6ea;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #d6b385bb;
+            transition: background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #ffebc8;
+        }
+
+        /* Blend cards with shadows, colors and interactive expand/collapse */
+        .blend {
+            margin-top: 12px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background: #fff8f2;
+            box-shadow: 0 3px 8px #f0d3bf;
+            border-left: 6px solid #cb7a4a;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .blend:hover {
+            background: #ffead9;
+            box-shadow: 0 5px 15px #dbb27b;
+        }
+
+        .blend h3 {
+            margin: 0 0 8px 0;
+            color: #a65a30;
+            user-select: text;
+        }
+
+        .blend p {
+            margin: 4px 0;
+            color: #684331;
+            user-select: text;
+        }
+
+        /* Properties list initially hidden, toggle visible */
+        .properties {
+            margin-top: 8px;
+            display: none;
+            user-select: text;
+        }
+
+        .properties ul {
+            list-style-type: circle;
+            color: #5a3d2a;
+            font-size: 0.95em;
+        }
+
+        /* Cursor icon for clickable blend section */
+        .blend::after {
+            content: '▼';
+            float:right;
+            margin-top: -1vh;
+            color: #bb8f62;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .blend.active::after {
+            transform: rotate(-180deg);
+            color: #a75a2a;
+        }
+
+        /* Responsive tweaks */
+        @media(max-width: 600px) {
+            body {
+                margin: 10px 15px;
+            }
+
+            section {
+                padding: 15px 20px;
+            }
+
+            .blend {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fabrics and Blends</h1>
+
+    <section>
+        <ul>
+            <!-- Static individual fabrics without expand/collapse -->
+            <li><strong>Nylon-Cotton (NYCO) Ripstop:</strong> A high-performance blend that is the standard for modern
+                military uniforms. It combines the breathability and comfort of cotton with the durability, abrasion
+                resistance, and quick-drying properties of nylon. The ripstop weave prevents tears from spreading.</li>
+            <li><strong>Merino Wool/Synthetic Blends:</strong> This blend uses the natural thermal regulation,
+                moisture-wicking, and anti-odor properties of Merino wool, enhanced with synthetic fibers like nylon for
+                added durability and ripstop strength.</li>
+            <li><strong>Gore-Tex®:</strong> The industry gold standard for waterproof and windproof membranes. It's a
+                microporous expanded polytetrafluoroethylene (ePTFE) film that allows water vapor (sweat) to escape
+                while blocking liquid water droplets.</li>
+            <li><strong>Polartec® NeoShell:</strong> A fabric that balances weather protection with high breathability.
+                It is air-permeable, allowing for active venting during high exertion, making it very comfortable to
+                wear.</li>
+            <li><strong>Aerogel-Infused Fabrics:</strong> A cutting-edge technology that integrates aerogel, a material
+                with extremely low thermal conductivity, into a fabric. This provides exceptional insulation for extreme
+                cold without the bulk of traditional materials.</li>
+            <li><strong>Synthetic Down (e.g., PrimaLoft®):</strong> A synthetic insulation made from fine fibers that
+                traps heat even when wet. It's lightweight and compresses well, making it ideal for packable jackets.
+            </li>
+            <li><strong>Polartec® Power Dry:</strong> A technical fleece fabric that pulls moisture away from the skin
+                and transfers it to the outer layer for quick evaporation. It is highly breathable and offers excellent
+                thermal regulation.</li>
+            <li><strong>Hemp:</strong> A highly durable and insulating natural fiber that is also very sustainable. It
+                is known for its strength and ability to regulate temperature.</li>
+            <li><strong>Dyneema® (UHMWPE):</strong> An ultra-high molecular weight polyethylene fiber known for its
+                incredible strength-to-weight ratio. It is used in lightweight protective gear and ripstop fabrics for
+                extreme durability.</li>
+            <li><strong>Biomimetic Fabrics:</strong> These are fabrics engineered to mimic natural properties, such as a
+                chameleon's ability to change color for camouflage or a plant's ability to repel water. (Exact name not
+                specified)</li>
+
+            <!-- Interactive blends with expandable details -->
+            <li>
+                <div class="blend" tabindex="0">
+                    <h3>Polycotton/Nylon Blend (The All-Purpose Uniform)</h3>
+                    <p><strong>Blend:</strong> 45% Polyester, 45% Cotton, 10% Nylon</p>
+                    <p><strong>Best For:</strong> A versatile, single uniform solution for diverse climates, from
+                        temperate to semi-arid regions.</p>
+                    <div class="properties">
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li>Breathability &amp; Comfort (from Cotton): The cotton content ensures the fabric remains
+                                breathable and comfortable against the skin.</li>
+                            <li>Durability &amp; Fast-Drying (from Polyester &amp; Nylon): Polyester adds wrinkle
+                                resistance and durability, while nylon significantly improves the fabric's abrasion and
+                                tear resistance. This blend is also fast-drying.</li>
+                            <li>Lightweight: The synthetic fibers keep the overall weight low.</li>
+                            <li>Ripstop: A ripstop weave can be easily applied to this blend, creating a strong grid
+                                that prevents tears.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="blend" tabindex="0">
+                    <h3>Wool/Nylon Blend (The Cold-Climate Specialist)</h3>
+                    <p><strong>Blend:</strong> 70% Merino Wool, 30% Nylon</p>
+                    <p><strong>Best For:</strong> Base and mid-layers in extreme cold and high-altitude regions.</p>
+                    <div class="properties">
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li>Insulation &amp; Thermoregulation (from Wool): Merino wool is an exceptional insulator
+                                that traps heat even when wet, making it perfect for cold conditions. It also regulates
+                                body temperature in fluctuating weather.</li>
+                            <li>Durability &amp; Strength (from Nylon): Nylon adds significant strength and durability
+                                to the natural wool fibers, preventing pilling and increasing the fabric's lifespan.
+                            </li>
+                            <li>Moisture Management: The blend wicks moisture away from the skin, a critical function in
+                                cold weather to prevent hypothermia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="blend" tabindex="0">
+                    <h3>Cotton/Jute Blend (The Sustainable &amp; Durable Option)</h3>
+                    <p><strong>Blend:</strong> 70% Cotton, 30% Jute</p>
+                    <p><strong>Best For:</strong> Uniforms for rugged, hot environments where durability and
+                        sustainability are a priority.</p>
+                    <div class="properties">
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li>Breathability &amp; Comfort (from Cotton): The high cotton content makes the fabric
+                                breathable and comfortable, essential for hot and humid climates.</li>
+                            <li>Durability &amp; Strength (from Jute): Jute, a strong natural fiber, adds an incredible
+                                level of durability and abrasion resistance to the fabric, making it suitable for
+                                challenging terrain.</li>
+                            <li>Sustainability: This blend is highly sustainable and biodegradable, which can
+                                significantly improve your project's sustainability score.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="blend" tabindex="0">
+                    <h3>Polyester/Jute Blend (The Lightweight &amp; Tough Uniform)</h3>
+                    <p><strong>Blend:</strong> 80% Polyester, 20% Jute</p>
+                    <p><strong>Best For:</strong> A lightweight uniform for humid and tropical regions where a balance
+                        of durability and quick-drying is crucial.</p>
+                    <div class="properties">
+                        <strong>Properties:</strong>
+                        <ul>
+                            <li>Lightweight &amp; Fast-Drying (from Polyester): Polyester provides a lightweight
+                                structure that wicks moisture and dries quickly.</li>
+                            <li>Durability (from Jute): Jute's strength reinforces the fabric, making it resistant to
+                                tearing and abrasion.</li>
+                            <li>Water Resistance: Polyester's natural water resistance can be enhanced with a coating to
+                                provide protection against rain and moisture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        // Toggle blend properties visibility on click
+        document.querySelectorAll('.blend').forEach(blend => {
+            blend.addEventListener('click', () => {
+                blend.classList.toggle('active');
+                const props = blend.querySelector('.properties');
+                if (props.style.display === 'block') {
+                    props.style.display = 'none';
+                } else {
+                    props.style.display = 'block';
+                }
+            });
+            // Allow keyboard interaction for accessibility
+            blend.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    blend.click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
